@@ -152,37 +152,16 @@ nav a:hover {
     max-width: 800px;
 }
 
-/* --- NEW ALIGNED EDUCATION HISTORY STYLE --- */
+/* --- NEW VERTICALLY STACKED EDUCATION STYLE (NO TITLE) --- */
 .education-section {
-    margin-top: 60px;
+    margin-top: 45px; /* Clean spacing right underneath your about paragraph text */
     width: 100%;
-}
-
-.education-title {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-}
-
-/* Elegant matching header line */
-.education-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 40%;
-    height: 3px;
-    background: linear-gradient(90deg, #4d23b3, #c534af); 
-    border-radius: 2px;
 }
 
 .education-grid {
     display: grid;
-    /* Controls card growth across desktop displays perfectly */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr; /* Forces a single column layout so cards stack cleanly */
+    gap: 25px;
 }
 
 .edu-card {
