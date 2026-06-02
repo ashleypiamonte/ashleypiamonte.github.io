@@ -10,132 +10,63 @@
 }
 
 body {
-    /* Matches your new canvas layout: deep center navy radiating to dark edges */
-    background: radial-gradient(circle at center, #070926 0%, #020208 80%);
-    background-attachment: fixed; /* Keeps the gradient smooth as you scroll */
+    /* Updated to a solid dark base for the whole page */
+    background-color: #020208;
     color: #e2e8f0; 
     line-height: 1.6;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 20px;
+/* --- NEW WAVE BACKGROUND (Restricted to Hero Section) --- */
+.wave-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #070926 0%, #020208 100%);
+    z-index: -1; 
+    overflow: hidden;
 }
 
-h1, h2, h3 {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    position: relative;
-    display: inline-block;
-}
-
-/* Elegant violet underline using the vibrant magenta/pink from your new wave graphic */
-section h2::after {
-    content: '';
+.wave {
     position: absolute;
     left: 0;
-    bottom: -8px;
-    width: 50%;
-    height: 4px;
-    background: linear-gradient(90deg, #4d23b3, #c534af); 
-    border-radius: 2px;
+    width: 200%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" fill="none" stroke="%23bc13fe" stroke-width="1.5" opacity="0.4"><path d="M0,160C120,192,240,256,360,256C480,256,600,192,720,154.7C840,117,960,107,1080,122.7C1200,139,1320,181,1380,202.7L1440,224"/></svg>');
+    background-repeat: repeat-x;
+    background-position: bottom center;
+    transform-origin: center bottom;
+}
+
+.wave1 { bottom: 0%; animation: moveWaves 14s linear infinite; opacity: 0.5; }
+.wave2 { bottom: 5%; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" fill="none" stroke="%2300f3ff" stroke-width="1" opacity="0.3"><path d="M0,96C144,128,288,192,432,208C576,224,720,192,864,160C1008,128,1152,96,1296,96C1440,96,1584,128,1656,144L1728,160"/></svg>'); animation: moveWavesReverse 20s linear infinite; opacity: 0.3; }
+.wave3 { bottom: -5%; animation: moveWaves 30s linear infinite; opacity: 0.2; }
+
+@keyframes moveWaves {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(1.05); }
+    100% { transform: translateX(-50%) scaleY(1); }
+}
+
+@keyframes moveWavesReverse {
+    0% { transform: translateX(-50%) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(0.95); }
+    100% { transform: translateX(0) scaleY(1); }
 }
 
 /* ==========================================
-   2. NAVIGATION HEADER
-   ========================================== */
-header {
-    background-color: rgba(3, 3, 10, 0.85); /* Slightly darker to match new theme */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    z-index: 1000;
-    border-bottom: 1px solid #1c1535; /* Subtle magenta/dark blue tint border */
-    backdrop-filter: blur(10px);
-}
-
-header .logo h2 {
-    font-size: 1.5rem;
-    background: linear-gradient(45deg, #a78bfa, #c534af); /* Blends into your new color scheme */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-nav a {
-    color: #94a3b8;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #f472b6; /* Soft pink-magenta hover state to accent the wave color */
-}
-
-/* ==========================================
-   3. HERO SECTION
+   3. HERO SECTION (Updated to support Waves)
    ========================================== */
 .hero {
+    position: relative; /* This ensures waves stay inside the hero */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    /* Uses a larger radial glow using the bright blue/magenta undertones from your image */
-    background: radial-gradient(circle at 40% 50%, #10123d 0%, transparent 60%),
-                radial-gradient(circle at 70% 40%, #300f38 0%, transparent 60%);
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
-
-.hero-content h2 {
-    font-size: 1.8rem;
-    color: #bc7af9; /* Slight magenta-tinted light violet */
-    margin-bottom: 20px;
-}
-
-.hero-content h2::after {
-    display: none; 
-}
-
-.hero-content p {
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    color: #94a3b8;
-    font-size: 1.1rem;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #812cb3, #b82ca1); /* Vibrant purple to magenta blend */
-    color: #ffffff;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(184, 44, 161, 0.3);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(184, 44, 161, 0.5);
+    overflow: hidden;
 }
 
 /* ==========================================
