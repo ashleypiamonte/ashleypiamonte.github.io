@@ -152,34 +152,47 @@ nav a:hover {
     max-width: 800px;
 }
 
-/* --- ADDED EDUCATION CODE --- */
+/* --- NEW ALIGNED EDUCATION HISTORY STYLE --- */
 .education-section {
-    margin-top: 50px;
+    margin-top: 60px;
     width: 100%;
 }
 
 .education-title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #ffffff;
-    margin-bottom: 25px;
-    font-family: 'Segoe UI', sans-serif;
-    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Elegant matching header line */
+.education-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40%;
+    height: 3px;
+    background: linear-gradient(90deg, #4d23b3, #c534af); 
+    border-radius: 2px;
 }
 
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    /* Controls card growth across desktop displays perfectly */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .edu-card {
-    background: rgba(11, 12, 31, 0.7);
+    background: rgba(11, 12, 31, 0.5);
     border: 1px solid #1c1535;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 16px;
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    position: relative;
     transition: all 0.3s ease;
 }
 
@@ -201,11 +214,12 @@ nav a:hover {
 }
 
 .edu-badge {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    padding: 4px 14px;
-    border-radius: 30px;
+    padding: 6px 14px;
+    border-radius: 20px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .edu-badge.present {
@@ -221,30 +235,29 @@ nav a:hover {
 }
 
 .edu-year {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #94a3b8;
     font-weight: 500;
 }
 
 .edu-card h4 {
     color: #ffffff;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     line-height: 1.4;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
 .edu-school {
-    color: #cbd5e1 !important;
-    font-size: 1.05rem;
-    margin-bottom: 4px !important;
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 4px;
     font-weight: 500;
 }
 
 .edu-location {
-    color: #64748b !important;
-    font-size: 0.9rem;
-    margin: 0 !important;
+    color: #64748b;
+    font-size: 0.85rem;
 }
 
 /* ==========================================
