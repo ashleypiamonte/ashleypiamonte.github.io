@@ -165,10 +165,14 @@ nav a:hover {
 }
 
 /* ==========================================
-   4. ABOUT SECTION
+   4. ABOUT SECTION (Updated & Stabilized)
    ========================================== */
 #about {
-    background-color: rgba(6, 6, 18, 0.4); /* Transparent glass look letting base color peek through */
+    background-color: rgba(6, 6, 18, 0.4); 
+    padding: 80px 20px; /* Added padding to create breathing room */
+    overflow: hidden;   /* Prevents the section from collapsing/bleeding */
+    position: relative; /* Anchors the internal content */
+    clear: both;        /* Ensures it stays below the hero section */
 }
 
 #about p {
@@ -178,18 +182,18 @@ nav a:hover {
     max-width: 800px;
 }
 
-/* --- NEW COMPACT VERTICALLY STACKED EDUCATION STYLE --- */
+/* --- Education Section --- */
 .education-section {
-    margin-top: 15px; /* Clean spacing right underneath your about paragraph text */
+    margin-top: 40px; /* Increased from 15px to give better breathing room */
     width: 100%;
 }
 
 .education-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Forces a single column layout so cards stack cleanly */
+    grid-template-columns: 1fr;
     gap: 25px;
-    max-width: 900px;           /* Prevents cards from stretching too long across the screen */
-    margin: 0 auto;             /* Centers the stacked block inside the section layout */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .edu-card {
@@ -233,12 +237,6 @@ nav a:hover {
     background: rgba(184, 44, 161, 0.15);
     color: #f472b6;
     border: 1px solid rgba(184, 44, 161, 0.3);
-}
-
-.edu-badge.honors {
-    background: rgba(13, 148, 136, 0.15);
-    color: #2dd4bf;
-    border: 1px solid rgba(13, 148, 136, 0.3);
 }
 
 .edu-year {
