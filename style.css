@@ -236,6 +236,11 @@ nav a:hover {
     padding: 30px;
     border-radius: 12px;
     transition: all 0.3s ease;
+    
+    /* Adds a flex layout so the button always stays neatly pushed to the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 .project-card h3 {
@@ -247,12 +252,38 @@ nav a:hover {
 .project-card p {
     color: #94a3b8;
     font-size: 0.95rem;
+    margin-bottom: 20px; /* Gives space between text and the button */
+    flex-grow: 1;        /* Keeps cards uniform even if descriptions differ in length */
 }
 
 .project-card:hover {
     border-color: #b82ca1;
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* New styling for your "View Code" links */
+.btn-link {
+    display: inline-block;
+    align-self: flex-start; /* Keeps the button on the left side of the card */
+    background: transparent;
+    color: #bc7af9; /* Matches your project heading color */
+    border: 1px solid #1c1535;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Beautiful glow effect when hovering over the button */
+.btn-link:hover {
+    background: linear-gradient(135deg, #812cb3, #b82ca1); /* Vibrant purple to magenta gradient */
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(184, 44, 161, 0.3);
 }
 
 /* ==========================================
