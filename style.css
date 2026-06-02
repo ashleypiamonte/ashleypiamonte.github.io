@@ -10,8 +10,10 @@
 }
 
 body {
-    background-color: #0d0d11; /* Deep, pleasant off-black */
-    color: #e2e8f0; /* Soft off-white for text readability */
+    /* Matches your new canvas layout: deep center navy radiating to dark edges */
+    background: radial-gradient(circle at center, #070926 0%, #020208 80%);
+    background-attachment: fixed; /* Keeps the gradient smooth as you scroll */
+    color: #e2e8f0; 
     line-height: 1.6;
 }
 
@@ -33,7 +35,7 @@ section h2 {
     display: inline-block;
 }
 
-/* Elegant violet underline for section titles */
+/* Elegant violet underline using the vibrant magenta/pink from your new wave graphic */
 section h2::after {
     content: '';
     position: absolute;
@@ -41,7 +43,7 @@ section h2::after {
     bottom: -8px;
     width: 50%;
     height: 4px;
-    background: #8b5cf6; /* Vibrant Violet */
+    background: linear-gradient(90deg, #4d23b3, #c534af); 
     border-radius: 2px;
 }
 
@@ -49,7 +51,7 @@ section h2::after {
    2. NAVIGATION HEADER
    ========================================== */
 header {
-    background-color: rgba(13, 13, 17, 0.95);
+    background-color: rgba(3, 3, 10, 0.85); /* Slightly darker to match new theme */
     position: fixed;
     top: 0;
     width: 100%;
@@ -58,13 +60,13 @@ header {
     align-items: center;
     padding: 20px 50px;
     z-index: 1000;
-    border-bottom: 1px solid #231f39; /* Subtle violet-tinted border */
+    border-bottom: 1px solid #1c1535; /* Subtle magenta/dark blue tint border */
     backdrop-filter: blur(10px);
 }
 
 header .logo h2 {
     font-size: 1.5rem;
-    background: linear-gradient(45deg, #a78bfa, #7c3aed);
+    background: linear-gradient(45deg, #a78bfa, #c534af); /* Blends into your new color scheme */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -78,7 +80,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #a78bfa; /* Lighter violet on hover */
+    color: #f472b6; /* Soft pink-magenta hover state to accent the wave color */
 }
 
 /* ==========================================
@@ -91,7 +93,9 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    background: radial-gradient(circle at center, #1e113a 0%, #0d0d11 70%); /* Subtle glowing dark violet background */
+    /* Uses a larger radial glow using the bright blue/magenta undertones from your image */
+    background: radial-gradient(circle at 40% 50%, #10123d 0%, transparent 60%),
+                radial-gradient(circle at 70% 40%, #300f38 0%, transparent 60%);
 }
 
 .hero-content h1 {
@@ -101,12 +105,12 @@ nav a:hover {
 
 .hero-content h2 {
     font-size: 1.8rem;
-    color: #a78bfa;
+    color: #bc7af9; /* Slight magenta-tinted light violet */
     margin-bottom: 20px;
 }
 
 .hero-content h2::after {
-    display: none; /* Removes underline effect in hero */
+    display: none; 
 }
 
 .hero-content p {
@@ -119,26 +123,26 @@ nav a:hover {
 /* Buttons */
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    background: linear-gradient(135deg, #812cb3, #b82ca1); /* Vibrant purple to magenta blend */
     color: #ffffff;
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 4px 15px rgba(184, 44, 161, 0.3);
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+    box-shadow: 0 6px 20px rgba(184, 44, 161, 0.5);
 }
 
 /* ==========================================
    4. ABOUT SECTION
    ========================================== */
 #about {
-    background-color: #12121a; /* Slightly lighter dark shade to separate sections */
+    background-color: rgba(6, 6, 18, 0.4); /* Transparent glass look letting base color peek through */
 }
 
 #about p {
@@ -159,8 +163,8 @@ nav a:hover {
 }
 
 .skill-card {
-    background: rgba(26, 26, 36, 0.6); /* Frosted glass matching your theme */
-    border: 1px solid #2e2a47;
+    background: rgba(13, 14, 33, 0.6); /* Slightly shifted navy base */
+    border: 1px solid #1f1b3a;
     border-radius: 16px;
     padding: 25px 20px;
     display: flex;
@@ -172,12 +176,11 @@ nav a:hover {
     -webkit-backdrop-filter: blur(10px);
 }
 
-/* Smooth pop-and-glow interactive effect */
 .skill-card:hover {
     transform: translateY(-8px);
-    background-color: #251e3e;
-    border-color: #8b5cf6; /* Matches your violet accent */
-    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+    background-color: #17112e;
+    border-color: #b82ca1; /* Glows magenta on hover */
+    box-shadow: 0 10px 25px rgba(184, 44, 161, 0.2);
 }
 
 .icon-box {
@@ -190,7 +193,6 @@ nav a:hover {
     transition: transform 0.3s ease;
 }
 
-/* Makes the logo slightly pop up when the card is hovered */
 .skill-card:hover .icon-box {
     transform: scale(1.15);
 }
@@ -214,12 +216,11 @@ nav a:hover {
     color: #ffffff;
 }
 
-
 /* ==========================================
    6. PROJECTS SECTION
    ========================================== */
 #projects {
-    background-color: #12121a;
+    background-color: rgba(6, 6, 18, 0.4);
 }
 
 .project-grid {
@@ -230,8 +231,8 @@ nav a:hover {
 }
 
 .project-card {
-    background-color: #1a1a24;
-    border: 1px solid #2e2a47;
+    background-color: #0b0c1f;
+    border: 1px solid #1c1535;
     padding: 30px;
     border-radius: 12px;
     transition: all 0.3s ease;
@@ -240,7 +241,7 @@ nav a:hover {
 .project-card h3 {
     margin-bottom: 15px;
     font-size: 1.4rem;
-    color: #a78bfa;
+    color: #bc7af9;
 }
 
 .project-card p {
@@ -249,9 +250,9 @@ nav a:hover {
 }
 
 .project-card:hover {
-    border-color: #7c3aed;
+    border-color: #b82ca1;
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================
@@ -259,7 +260,8 @@ nav a:hover {
    ========================================== */
 #contact {
     text-align: center;
-    background: radial-gradient(circle at bottom, #190f30 0%, #0d0d11 60%);
+    /* Bottom ambient lighting setup matching your dark theme image */
+    background: radial-gradient(circle at bottom, #230b30 0%, transparent 70%);
 }
 
 #contact p {
@@ -268,35 +270,31 @@ nav a:hover {
     color: #cbd5e1;
 }
 
-/* --- ADD THIS NEW CODE BELOW --- */
 #contact a {
-    color: #a78bfa; /* Beautiful light violet color matching your nav links */
-    text-decoration: none; /* Removes the default underline */
+    color: #bc7af9; 
+    text-decoration: none; 
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 #contact a:hover {
-    color: #8b5cf6; /* Turns into a richer vibrant violet when you hover over it */
-    text-decoration: underline; /* Adds an underline back on hover */
+    color: #f472b6; 
+    text-decoration: underline; 
 }
-
-/* ------------------------------- */
 
 #contact .btn {
     margin-top: 20px;
 }
 
-
 /* ==========================================
    8. FOOTER
    ========================================== */
 footer {
-    background-color: #08080c;
+    background-color: #020205;
     text-align: center;
     padding: 30px 20px;
-    border-top: 1px solid #1a1a24;
-    color: #64748b;
+    border-top: 1px solid #0f1026;
+    color: #4b5563;
     font-size: 0.9rem;
 }
 
@@ -329,4 +327,3 @@ footer {
         padding: 60px 20px;
     }
 }
-
