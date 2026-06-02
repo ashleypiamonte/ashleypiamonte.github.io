@@ -217,7 +217,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   6. PROJECTS SECTION (FIXED IMAGE OVERFLOW)
+   6. PROJECTS SECTION (EXACT MATCH FOR IMAGE_56D4E4)
    ========================================== */
 #projects {
     background-color: rgba(6, 6, 18, 0.4);
@@ -233,8 +233,8 @@ nav a:hover {
 .project-card {
     background-color: #0b0c1f;
     border: 1px solid #1c1535;
-    border-radius: 16px;
-    overflow: hidden; /* This locks the images inside the card borders */
+    border-radius: 24px; /* Matches the rounder curves in the image */
+    padding: 24px; /* Adds the layout padding inside the card container */
     transition: all 0.3s ease;
     
     display: flex;
@@ -242,25 +242,29 @@ nav a:hover {
     justify-content: space-between; 
 }
 
-/* Controls the cropped container aspect ratio for screenshots */
+/* This creates the floating white capsule box for your screenshots */
 .project-image {
     width: 100%;
     height: 180px; 
     overflow: hidden;
-    background-color: #ffffff; /* Gives white backing for clear web previews */
-    border-bottom: 1px solid #1c1535;
+    background-color: #ffffff; /* Smooth clean white background fill */
+    border-radius: 16px; /* Rounds the inner white preview box */
+    margin-bottom: 20px; /* Separates the image box from the title below */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Keeps the picture responsive and scaling correctly inside the container */
+/* Forces the entire screenshot to shrink and sit comfortably without warping */
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crops image smoothly so it matches layout proportions */
+    object-fit: contain; /* Shrinks the entire screenshot completely into view */
+    border-radius: 16px;
 }
 
-/* Adjusts the text section spacing since an image is above it now */
+/* Typography alignment for text under the image box */
 .project-info {
-    padding: 25px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -268,45 +272,43 @@ nav a:hover {
 }
 
 .project-card h3 {
-    margin-top: 5px;
     margin-bottom: 12px;
-    font-size: 1.35rem;
-    color: #bc7af9;
+    font-size: 1.4rem;
+    color: #ffffff; /* Bright white titles */
 }
 
 .project-card p {
     color: #94a3b8;
-    font-size: 0.92rem;
+    font-size: 0.95rem;
     margin-bottom: 25px; 
     flex-grow: 1;        
 }
 
 .project-card:hover {
-    border-color: #4cd3e6; /* Glows beautiful cyan on hover */
+    border-color: #4cd3e6;
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(76, 211, 230, 0.15);
 }
 
-/* Updated View Repository Button: Cyan/Blue glowing style per image_57cce7.jpg */
+/* Beautiful cyan-blue gradient button from your layout reference */
 .btn-link {
     display: inline-block;
     align-self: flex-start;
-    background: linear-gradient(135deg, #4cd3e6, #6366f1); /* Vibrant Cyan to Indigo layout */
-    color: #0b0c1f; /* Dark text stands out best on glowing cyan backgrounds */
+    background: linear-gradient(135deg, #5de0e6, #748ffc); 
+    color: #0b0c1f; 
     border: 1px solid transparent;
-    padding: 10px 24px;
-    border-radius: 20px;
+    padding: 12px 26px;
+    border-radius: 14px; /* Matches your specific button geometry */
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(76, 211, 230, 0.4); /* Vibrant permanent cyan glow */
+    box-shadow: 0 4px 15px rgba(93, 224, 230, 0.4); 
     transition: all 0.3s ease;
 }
 
 .btn-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 22px rgba(76, 211, 230, 0.6); 
+    box-shadow: 0 6px 22px rgba(93, 224, 230, 0.6); 
 }
 
 /* ==========================================
