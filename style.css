@@ -217,7 +217,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   6. PROJECTS SECTION (UPDATED PERMANENT GLOW)
+   6. PROJECTS SECTION (FIXED IMAGE OVERFLOW)
    ========================================== */
 #projects {
     background-color: rgba(6, 6, 18, 0.4);
@@ -233,55 +233,80 @@ nav a:hover {
 .project-card {
     background-color: #0b0c1f;
     border: 1px solid #1c1535;
-    padding: 30px;
-    border-radius: 12px;
+    border-radius: 16px;
+    overflow: hidden; /* This locks the images inside the card borders */
     transition: all 0.3s ease;
     
-    /* Pushes your buttons nicely to the bottom of the card */
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
 }
 
+/* Controls the cropped container aspect ratio for screenshots */
+.project-image {
+    width: 100%;
+    height: 180px; 
+    overflow: hidden;
+    background-color: #ffffff; /* Gives white backing for clear web previews */
+    border-bottom: 1px solid #1c1535;
+}
+
+/* Keeps the picture responsive and scaling correctly inside the container */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image smoothly so it matches layout proportions */
+}
+
+/* Adjusts the text section spacing since an image is above it now */
+.project-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
 .project-card h3 {
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 1.35rem;
     color: #bc7af9;
 }
 
 .project-card p {
     color: #94a3b8;
-    font-size: 0.95rem;
-    margin-bottom: 25px; /* Spacing between your description and button */
-    flex-grow: 1;        /* Ensures even spacing on cards */
+    font-size: 0.92rem;
+    margin-bottom: 25px; 
+    flex-grow: 1;        
 }
 
 .project-card:hover {
-    border-color: #b82ca1;
+    border-color: #4cd3e6; /* Glows beautiful cyan on hover */
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(76, 211, 230, 0.15);
 }
 
-/* This styles the "View Project" button to look permanently glowing and filled */
+/* Updated View Repository Button: Cyan/Blue glowing style per image_57cce7.jpg */
 .btn-link {
     display: inline-block;
     align-self: flex-start;
-    background: linear-gradient(135deg, #812cb3, #b82ca1); /* Vibrant purple to magenta gradient layout */
-    color: #ffffff;
+    background: linear-gradient(135deg, #4cd3e6, #6366f1); /* Vibrant Cyan to Indigo layout */
+    color: #0b0c1f; /* Dark text stands out best on glowing cyan backgrounds */
     border: 1px solid transparent;
     padding: 10px 24px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(184, 44, 161, 0.4); /* Glow effect */
+    box-shadow: 0 4px 15px rgba(76, 211, 230, 0.4); /* Vibrant permanent cyan glow */
     transition: all 0.3s ease;
 }
 
 .btn-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(184, 44, 161, 0.6); /* Pop-up hover effect */
+    box-shadow: 0 6px 22px rgba(76, 211, 230, 0.6); 
 }
 
 /* ==========================================
