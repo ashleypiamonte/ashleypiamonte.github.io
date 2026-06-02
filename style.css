@@ -217,7 +217,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   6. PROJECTS SECTION (EXACT MATCH FOR IMAGE_56D4E4)
+   6. PROJECTS SECTION (ORIGINAL PURPLE & MAGENTA COLORS)
    ========================================== */
 #projects {
     background-color: rgba(6, 6, 18, 0.4);
@@ -233,8 +233,8 @@ nav a:hover {
 .project-card {
     background-color: #0b0c1f;
     border: 1px solid #1c1535;
-    border-radius: 24px; /* Matches the rounder curves in the image */
-    padding: 24px; /* Adds the layout padding inside the card container */
+    border-radius: 24px; 
+    padding: 24px; 
     transition: all 0.3s ease;
     
     display: flex;
@@ -242,28 +242,26 @@ nav a:hover {
     justify-content: space-between; 
 }
 
-/* This creates the floating white capsule box for your screenshots */
+/* White capsule preview box for screenshots */
 .project-image {
     width: 100%;
     height: 180px; 
     overflow: hidden;
-    background-color: #ffffff; /* Smooth clean white background fill */
-    border-radius: 16px; /* Rounds the inner white preview box */
-    margin-bottom: 20px; /* Separates the image box from the title below */
+    background-color: #ffffff; 
+    border-radius: 16px; 
+    margin-bottom: 20px; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Forces the entire screenshot to shrink and sit comfortably without warping */
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Shrinks the entire screenshot completely into view */
+    object-fit: contain; 
     border-radius: 16px;
 }
 
-/* Typography alignment for text under the image box */
 .project-info {
     display: flex;
     flex-direction: column;
@@ -274,7 +272,7 @@ nav a:hover {
 .project-card h3 {
     margin-bottom: 12px;
     font-size: 1.4rem;
-    color: #ffffff; /* Bright white titles */
+    color: #ffffff; 
 }
 
 .project-card p {
@@ -284,31 +282,33 @@ nav a:hover {
     flex-grow: 1;        
 }
 
+/* Hover border changed back to your vibrant magenta */
 .project-card:hover {
-    border-color: #4cd3e6;
+    border-color: #b82ca1;
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(76, 211, 230, 0.15);
+    box-shadow: 0 10px 25px rgba(184, 44, 161, 0.2);
 }
 
-/* Beautiful cyan-blue gradient button from your layout reference */
+/* RESTORED: Your original glowing purple-to-magenta gradient button layout */
 .btn-link {
     display: inline-block;
     align-self: flex-start;
-    background: linear-gradient(135deg, #5de0e6, #748ffc); 
-    color: #0b0c1f; 
+    background: linear-gradient(135deg, #812cb3, #b82ca1); 
+    color: #ffffff; /* White text looks beautifully crisp on your purple button */
     border: 1px solid transparent;
     padding: 12px 26px;
-    border-radius: 14px; /* Matches your specific button geometry */
+    border-radius: 14px; 
     text-decoration: none;
     font-size: 0.9rem;
-    font-weight: 700;
-    box-shadow: 0 4px 15px rgba(93, 224, 230, 0.4); 
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(184, 44, 161, 0.4); /* Your signature magenta glow */
     transition: all 0.3s ease;
 }
 
 .btn-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 22px rgba(93, 224, 230, 0.6); 
+    box-shadow: 0 6px 22px rgba(184, 44, 161, 0.6); 
 }
 
 /* ==========================================
