@@ -268,9 +268,25 @@ nav a:hover {
     color: #cbd5e1;
 }
 
+/* --- ADD THIS NEW CODE BELOW --- */
+#contact a {
+    color: #a78bfa; /* Beautiful light violet color matching your nav links */
+    text-decoration: none; /* Removes the default underline */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #8b5cf6; /* Turns into a richer vibrant violet when you hover over it */
+    text-decoration: underline; /* Adds an underline back on hover */
+}
+
+/* ------------------------------- */
+
 #contact .btn {
     margin-top: 20px;
 }
+
 
 /* ==========================================
    8. FOOTER
