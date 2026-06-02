@@ -256,34 +256,101 @@ nav a:hover {
 }
 
 /* ==========================================
-   7. CONTACT SECTION
+   7. CONTACT SECTION (MODERNIZED)
    ========================================== */
 #contact {
     text-align: center;
-    /* Bottom ambient lighting setup matching your dark theme image */
     background: radial-gradient(circle at bottom, #230b30 0%, transparent 70%);
+    padding: 100px 20px;
 }
 
-#contact p {
-    margin-bottom: 10px;
+.contact-subtitle {
+    color: #94a3b8;
     font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flexbox grid to arrange your links side-by-side */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Modern Glassmorphic Cards */
+.contact-card {
+    background: rgba(11, 12, 31, 0.6);
+    border: 1px solid #1c1535;
+    padding: 35px 25px;
+    border-radius: 16px;
+    width: 280px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+.contact-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    word-break: break-all; /* Keeps long emails safe on small phone screens */
+}
+
+/* Clean, inline text buttons inside cards */
+.card-link {
+    color: #bc7af9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(188, 122, 249, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Sleek Hover Interactions */
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: #b82ca1; /* Glows neon magenta when active */
+    box-shadow: 0 15px 35px rgba(184, 44, 161, 0.25);
+}
+
+.contact-card:hover .card-link {
+    background: linear-gradient(135deg, #812cb3, #b82ca1);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(184, 44, 161, 0.3);
+}
+
+/* Small footer section for phone numbers */
+.contact-footer {
+    margin-top: 50px;
     color: #cbd5e1;
+    font-size: 1.05rem;
 }
 
-#contact a {
-    color: #bc7af9; 
-    text-decoration: none; 
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-#contact a:hover {
-    color: #f472b6; 
-    text-decoration: underline; 
-}
-
-#contact .btn {
-    margin-top: 20px;
+.contact-footer strong {
+    color: #bc7af9;
 }
 
 /* ==========================================
