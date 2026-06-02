@@ -162,7 +162,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr; /* Forces a single column layout so cards stack cleanly */
     gap: 25px;
-    max-width: 650px;           /* Prevents cards from stretching too long across the screen */
+    max-width: 900px;           /* Prevents cards from stretching too long across the screen */
     margin: 0 auto;             /* Centers the stacked block inside the section layout */
 }
 
