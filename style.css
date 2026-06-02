@@ -217,7 +217,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   6. PROJECTS SECTION
+   6. PROJECTS SECTION (UPDATED PERMANENT GLOW)
    ========================================== */
 #projects {
     background-color: rgba(6, 6, 18, 0.4);
@@ -237,7 +237,7 @@ nav a:hover {
     border-radius: 12px;
     transition: all 0.3s ease;
     
-    /* Adds a flex layout so the button always stays neatly pushed to the bottom */
+    /* Pushes your buttons nicely to the bottom of the card */
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -252,8 +252,8 @@ nav a:hover {
 .project-card p {
     color: #94a3b8;
     font-size: 0.95rem;
-    margin-bottom: 20px; /* Gives space between text and the button */
-    flex-grow: 1;        /* Keeps cards uniform even if descriptions differ in length */
+    margin-bottom: 25px; /* Spacing between your description and button */
+    flex-grow: 1;        /* Ensures even spacing on cards */
 }
 
 .project-card:hover {
@@ -262,28 +262,26 @@ nav a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* New styling for your "View Code" links */
+/* This styles the "View Project" button to look permanently glowing and filled */
 .btn-link {
     display: inline-block;
-    align-self: flex-start; /* Keeps the button on the left side of the card */
-    background: transparent;
-    color: #bc7af9; /* Matches your project heading color */
-    border: 1px solid #1c1535;
-    padding: 8px 20px;
+    align-self: flex-start;
+    background: linear-gradient(135deg, #812cb3, #b82ca1); /* Vibrant purple to magenta gradient layout */
+    color: #ffffff;
+    border: 1px solid transparent;
+    padding: 10px 24px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(184, 44, 161, 0.4); /* Glow effect */
     transition: all 0.3s ease;
 }
 
-/* Beautiful glow effect when hovering over the button */
 .btn-link:hover {
-    background: linear-gradient(135deg, #812cb3, #b82ca1); /* Vibrant purple to magenta gradient */
-    color: #ffffff;
-    border-color: transparent;
-    box-shadow: 0 4px 12px rgba(184, 44, 161, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 44, 161, 0.6); /* Pop-up hover effect */
 }
 
 /* ==========================================
@@ -294,7 +292,6 @@ nav a:hover {
     padding: 80px 0;
 }
 
-/* The box container shape from the reference image, using YOUR dark colors */
 .contact-wrapper {
     display: flex;
     justify-content: space-between;
@@ -310,7 +307,6 @@ nav a:hover {
     text-align: left;
 }
 
-/* Left text side alignment */
 .contact-info-side {
     flex: 1.2;
 }
@@ -338,7 +334,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Right side button centering */
 .contact-btn-side {
     flex: 0.8;
     display: flex;
@@ -346,7 +341,6 @@ nav a:hover {
     align-items: center;
 }
 
-/* Keeps it looking normal and clean on mobile phone screens */
 @media (max-width: 768px) {
     .contact-wrapper {
         flex-direction: column;
