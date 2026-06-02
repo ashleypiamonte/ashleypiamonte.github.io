@@ -152,7 +152,7 @@ nav a:hover {
     max-width: 800px;
 }
 
-/* --- NEW VERTICALLY STACKED EDUCATION STYLE (NO TITLE) --- */
+/* --- NEW COMPACT VERTICALLY STACKED EDUCATION STYLE --- */
 .education-section {
     margin-top: 45px; /* Clean spacing right underneath your about paragraph text */
     width: 100%;
@@ -162,6 +162,8 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr; /* Forces a single column layout so cards stack cleanly */
     gap: 25px;
+    max-width: 650px;           /* Prevents cards from stretching too long across the screen */
+    margin: 0 auto;             /* Centers the stacked block inside the section layout */
 }
 
 .edu-card {
@@ -510,5 +512,6 @@ footer {
     
     .education-grid {
         grid-template-columns: 1fr;
+        max-width: 100%; /* Allows cards to take up natural spacing on mobile devices */
     }
 }
