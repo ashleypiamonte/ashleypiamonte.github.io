@@ -256,101 +256,76 @@ nav a:hover {
 }
 
 /* ==========================================
-   7. CONTACT SECTION (MODERNIZED)
+   7. CONTACT SECTION (RE-ALIGNED)
    ========================================== */
 #contact {
-    text-align: center;
     background: radial-gradient(circle at bottom, #230b30 0%, transparent 70%);
-    padding: 100px 20px;
+    padding: 80px 0;
 }
 
-.contact-subtitle {
-    color: #94a3b8;
+/* The box container shape from the reference image, using YOUR dark colors */
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 14, 33, 0.65); /* Dark transparent tint */
+    border: 1px solid #1c1535; /* Your subtle violet-tinted border */
+    border-radius: 20px;
+    padding: 60px !important;
+    gap: 40px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    text-align: left;
+}
+
+/* Left text side alignment */
+.contact-info-side {
+    flex: 1.2;
+}
+
+.contact-info-side h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.info-list p {
+    margin-bottom: 15px;
     font-size: 1.1rem;
-    margin-bottom: 50px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    color: #cbd5e1; /* Soft off-white text color */
 }
 
-/* Flexbox grid to arrange your links side-by-side */
-.contact-grid {
+.info-list a {
+    color: #bc7af9; /* Your original soft violet */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.info-list a:hover {
+    color: #f472b6; /* Your soft pink hover accent */
+    text-decoration: underline;
+}
+
+/* Right side button centering */
+.contact-btn-side {
+    flex: 0.8;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 950px;
-    margin: 0 auto;
-}
-
-/* Modern Glassmorphic Cards */
-.contact-card {
-    background: rgba(11, 12, 31, 0.6);
-    border: 1px solid #1c1535;
-    padding: 35px 25px;
-    border-radius: 16px;
-    width: 280px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
-.contact-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-}
-
-.contact-card p {
-    color: #94a3b8;
-    font-size: 0.95rem;
-    margin-bottom: 25px;
-    word-break: break-all; /* Keeps long emails safe on small phone screens */
-}
-
-/* Clean, inline text buttons inside cards */
-.card-link {
-    color: #bc7af9;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background: rgba(188, 122, 249, 0.1);
-    transition: all 0.3s ease;
-    display: inline-block;
-    width: 100%;
-}
-
-/* Sleek Hover Interactions */
-.contact-card:hover {
-    transform: translateY(-10px);
-    border-color: #b82ca1; /* Glows neon magenta when active */
-    box-shadow: 0 15px 35px rgba(184, 44, 161, 0.25);
-}
-
-.contact-card:hover .card-link {
-    background: linear-gradient(135deg, #812cb3, #b82ca1);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(184, 44, 161, 0.3);
-}
-
-/* Small footer section for phone numbers */
-.contact-footer {
-    margin-top: 50px;
-    color: #cbd5e1;
-    font-size: 1.05rem;
-}
-
-.contact-footer strong {
-    color: #bc7af9;
+/* Keeps it looking normal and clean on mobile phone screens */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px !important;
+    }
+    
+    .contact-info-side h2::after {
+        left: 25%;
+    }
 }
 
 /* ==========================================
