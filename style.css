@@ -110,13 +110,15 @@ nav a:hover {
 }
 
 .name-highlight {
-    color: #00f2ff; /* Cyan accent */
-    text-shadow: 0 0 15px rgba(0, 242, 255, 0.5);
+    color: #ffffff;      /* Change from cyan to pure white */
+    text-shadow: none;   /* Removes the glow effect */
 }
 
+/* Ensure your button container has these settings */
 .hero-btns {
     display: flex;
-    gap: 15px;
+    align-items: center; /* Keeps them vertically centered */
+    gap: 20px;           /* Provides clean spacing between the two buttons */
     margin-top: 30px;
 }
 
