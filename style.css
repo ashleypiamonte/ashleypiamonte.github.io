@@ -19,7 +19,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px; /* Reduced to bring sections closer */
+    padding: 20px 20px; /* Adjusted padding to tighten spacing */
 }
 
 h1, h2, h3 {
@@ -82,10 +82,10 @@ nav a:hover {
 }
 
 /* ==========================================
-   3. HERO SECTION
+   3. HERO SECTION (Finalized)
    ========================================== */
 .hero {
-    min-height: 70vh; /* Reduced from 80vh to tighten vertical space */
+    min-height: 60vh; /* Reduced height to eliminate massive gap */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,11 +180,11 @@ nav a:hover {
 }
 
 /* ==========================================
-   4. ABOUT SECTION
+   4. ABOUT SECTION (Updated & Stabilized)
    ========================================== */
 #about {
-    background-color: rgba(6, 6, 18, 0.4); 
-    padding: 40px 20px; /* Reduced from 80px */
+    background-color: rgba(6, 6, 18, 0.4);
+    padding: 40px 20px; /* Reduced padding here */
     overflow: hidden;
     position: relative;
     clear: both;
@@ -198,7 +198,7 @@ nav a:hover {
 }
 
 .education-section {
-    margin-top: 40px;
+    margin-top: 20px; /* Tightened margin */
     width: 100%;
 }
 
@@ -280,7 +280,7 @@ nav a:hover {
 }
 
 /* ==========================================
-   5. TOOLKIT & SKILLS
+   5. TOOLKIT & SKILLS (CREATIVE DESIGN)
    ========================================== */
 .skills-grid {
     display: grid;
@@ -503,6 +503,6 @@ footer {
     nav a { margin: 0 10px; }
     .hero-content h1 { font-size: 2.5rem; }
     .hero-content h2 { font-size: 1.4rem; }
-    .container { padding: 30px 20px; } /* Fixed override here */
+    .container { padding: 30px 20px; } 
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
