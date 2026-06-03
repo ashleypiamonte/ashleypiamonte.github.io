@@ -127,10 +127,11 @@ nav a:hover {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    /* This creates the solid box color */
     background: linear-gradient(135deg, #812cb3, #b82ca1);
     color: #ffffff;
     padding: 12px 26px;
-    border-radius: 14px;
+    border-radius: 14px; /* This makes the corners rounded/capsule */
     text-decoration: none;
     font-weight: 600;
     box-shadow: 0 4px 15px rgba(184, 44, 161, 0.4);
