@@ -508,61 +508,57 @@ footer {
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
-/* Card container layout */
+/* Card Container */
 .card {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center; /* Centers the job descriptions as seen in the image */
+    border: 1px solid #3d2b56;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: #0b0c10;
 }
 
-/* Aligning the title to the left of the card */
-.section-title {
-    text-align: left;
+/* Header inside card */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Badge styling */
+.badge {
+    background-color: #3d2b56;
     color: #ffffff;
-    font-size: 1.8em;
-    margin-bottom: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-/* Gradient line under the title */
-.gradient-line {
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(to right, #9b51e0, #308cf8);
-    margin-bottom: 30px;
-    margin-left: 0; /* Aligns the line to the left like in the image */
+.date {
+    color: #888;
+    font-size: 0.85em;
 }
 
-/* Job section styling */
-.job {
-    margin-bottom: 30px;
-}
-
-.work-meta {
-    font-size: 0.8em;
-    color: #cccccc;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.job h3 {
-    margin: 5px 0;
-    font-size: 1.3em;
+/* Text styling */
+.card h3 {
+    margin: 0 0 5px 0;
     color: #ffffff;
+    font-size: 1.4em;
 }
 
 .company {
+    color: #a0a0a0;
     margin: 0 0 15px 0;
-    color: #888888;
 }
 
-.job ul {
-    list-style: none;
-    padding: 0;
+.card ul {
     color: #cccccc;
+    padding-left: 20px;
+    margin: 0;
 }
 
-.job ul li {
+.card ul li {
     margin-bottom: 5px;
 }
-
