@@ -494,7 +494,23 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Container styling to match the Senior High box */
+.job-container {
+    border: 1px solid #d63384; /* Matches the border color seen in c055113a-bdad-4a4f-83a8-a5660d2bf967.jpg */
+    border-radius: 20px;       /* Matches the rounded corners in c055113a-bdad-4a4f-83a8-a5660d2bf967.jpg */
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
+/* Badge styling to match the label in c055113a-bdad-4a4f-83a8-a5660d2bf967.jpg */
+.job-label {
+    background-color: #3e1b3d; /* Matches the background color of the tag in c055113a-bdad-4a4f-83a8-a5660d2bf967.jpg */
+    color: #f06292;            /* Matches the text color of the tag in c055113a-bdad-4a4f-83a8-a5660d2bf967.jpg */
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
 /* ==========================================
    9. RESPONSIVE DESIGN
    ========================================== */
@@ -508,21 +524,4 @@ footer {
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
-/* Ensure the list inside the Work Experience card matches your theme */
-.card ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    color: #cccccc;
-    font-size: 0.95rem;
-}
 
-.card ul li {
-    margin-bottom: 5px;
-}
-
-/* Ensure the date matches your existing edu-year style */
-.edu-year {
-    font-size: 0.85rem;
-    color: #94a3b8;
-    font-weight: 500;
-}
