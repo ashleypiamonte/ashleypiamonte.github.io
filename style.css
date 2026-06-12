@@ -508,58 +508,47 @@ footer {
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
-/* Styling for the section heading */
+/* Center the entire section */
+.experience-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff; /* Plain white text */
+}
+
+/* Heading style */
 .experience-section h2 {
-    color: #ffffff;
+    font-size: 2em;
     margin-bottom: 20px;
-    font-size: 1.5em;
 }
 
-/* Card Container */
-.card {
-    border: 1px solid #3d2b56;
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
-    background-color: #0d0d12;
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.badge {
-    background-color: #3d2b56;
-    color: #ffffff;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.7em;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-.date {
-    color: #888;
-    font-size: 0.85em;
-}
-
-.card h3 {
-    margin: 0 0 5px 0;
-    color: #ffffff;
-    font-size: 1.25em;
-}
-
-.company {
-    color: #a0a0a0;
-    margin: 0 0 15px 0;
-    font-size: 1em;
-}
-
-.card ul {
+/* Job metadata (WORK + date) */
+.work-meta {
+    font-size: 0.9em;
     color: #cccccc;
-    padding-left: 20px;
-    margin: 0;
+    margin: 15px 0 5px 0;
+}
+
+/* Job title styling */
+.job h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Company name styling */
+.company {
+    font-size: 1em;
+    color: #aaaaaa;
+    margin-bottom: 10px;
+}
+
+/* Removing bullet point indentation for centered look */
+.experience-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.experience-section ul li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
 }
