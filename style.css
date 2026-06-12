@@ -508,57 +508,40 @@ footer {
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
-/* Card Container */
+/* Ensure cards match the specific styling in image_872639.jpg */
 .card {
-    border: 1px solid #3d2b56;
-    border-radius: 15px;
+    /* Using the same container structure as your other cards */
+    border: 1px solid #3d2b56; 
+    border-radius: 12px;
     padding: 25px;
-    margin-bottom: 25px;
-    background-color: #0b0c10;
+    margin: 20px auto;
+    max-width: 800px; /* Adjust this to match your site's main card width */
+    background-color: #0d0d12; /* Darker background to match screenshot */
 }
 
-/* Header inside card */
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-/* Badge styling */
+/* Badge styling to match */
 .badge {
+    display: inline-block;
     background-color: #3d2b56;
-    color: #ffffff;
-    padding: 5px 12px;
+    color: #e0e0e0;
+    padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75em;
-    font-weight: bold;
-    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
-.date {
-    color: #888;
-    font-size: 0.85em;
-}
-
-/* Text styling */
+/* Text alignment and color */
 .card h3 {
-    margin: 0 0 5px 0;
     color: #ffffff;
-    font-size: 1.4em;
+    margin: 5px 0;
 }
 
 .company {
     color: #a0a0a0;
-    margin: 0 0 15px 0;
+    margin-bottom: 10px;
 }
 
 .card ul {
     color: #cccccc;
     padding-left: 20px;
-    margin: 0;
-}
-
-.card ul li {
-    margin-bottom: 5px;
 }
