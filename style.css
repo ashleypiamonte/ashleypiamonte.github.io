@@ -508,44 +508,64 @@ footer {
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
-/* Center the entire section */
-.experience-section {
-    text-align: center;
+/* Card container layout */
+.card {
     max-width: 800px;
-    margin: 0 auto;
-    color: #ffffff; /* Plain white text */
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center; /* Centers the job descriptions as seen in the image */
 }
 
-/* Heading style */
-.experience-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+/* Aligning the title to the left of the card */
+.section-title {
+    text-align: left;
+    color: #ffffff;
+    font-size: 1.8em;
+    margin-bottom: 5px;
 }
 
-/* Job metadata (WORK + date) */
+/* Gradient line under the title */
+.gradient-line {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #9b51e0, #308cf8);
+    margin-bottom: 30px;
+    margin-left: 0; /* Aligns the line to the left like in the image */
+}
+
+/* Job section styling */
+.job {
+    margin-bottom: 30px;
+}
+
 .work-meta {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #cccccc;
-    margin: 15px 0 5px 0;
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
-/* Job title styling */
 .job h3 {
-    font-size: 1.2em;
     margin: 5px 0;
+    font-size: 1.3em;
+    color: #ffffff;
 }
 
-/* Company name styling */
 .company {
-    font-size: 1em;
-    color: #aaaaaa;
-    margin-bottom: 10px;
+    margin: 0 0 15px 0;
+    color: #888888;
 }
 
-/* Removing bullet point indentation for centered look */
-.experience-section ul {
-    list-style-type: none;
+.job ul {
+    list-style: none;
     padding: 0;
+    color: #cccccc;
+}
+
+.job ul li {
+    margin-bottom: 5px;
+}
+
 }
 
 .experience-section ul li {
