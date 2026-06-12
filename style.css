@@ -508,40 +508,21 @@ footer {
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
 
-/* Ensure cards match the specific styling in image_872639.jpg */
-.card {
-    /* Using the same container structure as your other cards */
-    border: 1px solid #3d2b56; 
-    border-radius: 12px;
-    padding: 25px;
-    margin: 20px auto;
-    max-width: 800px; /* Adjust this to match your site's main card width */
-    background-color: #0d0d12; /* Darker background to match screenshot */
-}
-
-/* Badge styling to match */
-.badge {
-    display: inline-block;
-    background-color: #3d2b56;
-    color: #e0e0e0;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75em;
-    margin-bottom: 10px;
-}
-
-/* Text alignment and color */
-.card h3 {
-    color: #ffffff;
-    margin: 5px 0;
-}
-
-.company {
-    color: #a0a0a0;
-    margin-bottom: 10px;
-}
-
+/* Ensure the list inside the Work Experience card matches your theme */
 .card ul {
-    color: #cccccc;
+    margin-top: 10px;
     padding-left: 20px;
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+.card ul li {
+    margin-bottom: 5px;
+}
+
+/* Ensure the date matches your existing edu-year style */
+.edu-year {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-weight: 500;
 }
