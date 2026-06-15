@@ -582,7 +582,8 @@ footer {
     .container { padding: 30px 20px; } 
     .education-grid { grid-template-columns: 1fr; max-width: 100%; }
 }
-.education-section h2::after {
+/* This hides the purple line for both Education and Work sections */
+.education-section h2::after, 
+.work-section h2::after {
     display: none !important;
 }
-
