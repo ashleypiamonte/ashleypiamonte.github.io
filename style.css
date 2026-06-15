@@ -487,11 +487,21 @@ nav a:hover {
    ========================================== */
 footer {
     background-color: #020205;
-    text-align: center;
     padding: 30px 20px;
     border-top: 1px solid #0f1026;
     color: #4b5563;
     font-size: 0.9rem;
+    
+    /* ADD THESE LINES TO FIX CENTERING */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ensure no margin on paragraph text is pushing it off-center */
+footer p {
+    margin: 0;
 }
 
 /* This uses your exact Education-style classes */
