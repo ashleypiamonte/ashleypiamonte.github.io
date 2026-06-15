@@ -598,3 +598,16 @@ footer {
 .custom-center::after {
     display: none !important;
 }
+
+/* This centers only the headers that have the 'section-center' class */
+.section-center {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+}
+
+/* This removes the purple line only for these two headers */
+.section-center::after {
+    display: none !important;
+}
