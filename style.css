@@ -27,12 +27,11 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-section h2, .section-title {
+section h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    text-align: center;
-    width: 100%;
-    display: block;
+    position: relative;
+    display: inline-block;
 }
 
 section h2::after {
@@ -586,5 +585,16 @@ footer {
 /* This hides the purple line for both Education and Work sections */
 .education-section h2::after, 
 .work-section h2::after {
+    display: none !important;
+}
+
+/* Only centers Education and Work, and removes their underline */
+.custom-center {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.custom-center::after {
     display: none !important;
 }
